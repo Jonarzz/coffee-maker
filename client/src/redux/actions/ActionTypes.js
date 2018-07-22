@@ -1,4 +1,5 @@
 export const ADD_MENU_ITEM = 'ADD_MENU_ITEM';
 export const DELETE_MENU_ITEM = 'DELETE_MENU_ITEM';
+export const DELETE_ALL_MENU_ITEMS = 'DELETE_ALL_MENU_ITEMS';
 
 export const CHANGE_PAGE = 'CHANGE_PAGE';

@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {deleteMenuItem} from "../../redux/actions/menuItemsActions";
+import {deleteAllMenuItems, deleteMenuItem} from "../../redux/actions/menuItemsActions";
 import store from "../../redux/store";
 import './Cart.css';
 
@@ -43,9 +43,13 @@ class Cart extends Component {
                             );
                         })}
                         <tr style={{ borderTop: '1px solid white' }}>
-                            <td className="cart__items__item-info">&nbsp;</td>
-                            <td className="cart__items__item-info">&nbsp;</td>
-                            <td className="cart__items__item-info">${menuItems.reduce((sum, item) => sum + item.price, 0)}</td>
+                            <td className="cart__items__item-info">
+                                <button className="far fa-trash-alt" onClick={() => store.dispatch(deleteAllMenuItems())}/>
+                            </td>
+                            <td className="cart__items__item-info">All</td>
+                            <td className="cart__items__item-info">
+                                ${menuItems.reduce((sum, item) => sum + item.price, 0)}
+                            </td>
                             <td className="cart__items__item-info">&nbsp;</td>
                         </tr>
                     </table>

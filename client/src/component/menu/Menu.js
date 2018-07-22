@@ -77,7 +77,7 @@ class Menu extends PureComponent {
             const price = sizeToPrice[size];
             return (
                 <div key={sizeIndex} className="menu__items-item__sizes-row">
-                    <button onClick={e => this._addItemToCart(e, item.name, price, size)}>
+                    <button onClick={e => this._addItemToCart(e, item.name, price, size)} style={{ paddingRight: 100 }}>
                         {size}
                     </button>
                     <p>${price}</p>

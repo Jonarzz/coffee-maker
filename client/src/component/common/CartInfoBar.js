@@ -1,8 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import store from '../../redux/store';
-import "./CartInfoBar.css";
 import Cart from "../cart/Cart";
+import "./CartInfoBar.css";
 
 const CartInfoBar = props => {
 
