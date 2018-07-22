@@ -10,8 +10,8 @@ const CartInfoBar = props => {
 
     return (
         <div className="cart-info-bar">
-            <a onClick={() => changePage('div')} className="cart-info-bar__items">
-                {menuItems.length} items
+            <a onClick={() => changePage('div')} href="#" className="cart-info-bar__items-info">
+                {menuItems.length} items - ${menuItems.reduce((sum, item) => sum + item.price, 0)}
             </a>
         </div>
     );

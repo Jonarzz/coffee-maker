@@ -5,7 +5,7 @@ import './Header.css';
 const Header = props => {
 
     return (
-        <h1 className="header">
+        <h1 className="header" onClick={props.onClick}>
             {props.text}
         </h1>
     );
