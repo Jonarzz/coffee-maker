@@ -30,13 +30,13 @@ class Menu extends PureComponent {
                         return (
                             <div className="menu__items-item">
                                 <div className="menu__items-item-row">
-                                    <a onClick={e => this._onMenuItemClick(item, index, e)} key={index} href="#">
+                                    <button onClick={e => this._onMenuItemClick(item, index, e)} key={index}>
                                         {name}
                                         {item.sizeToPrice &&
                                             <i className="fas fa-sort-down"
                                                style={{transform: 'translateY(-3px)', marginLeft: 5 }}/>
                                         }
-                                    </a>
+                                    </button>
                                     {item.price &&
                                         <p className="menu__items-item-row__price">${item.price}</p>
                                     }
@@ -50,7 +50,7 @@ class Menu extends PureComponent {
                     })}
                     {this.props.hasCustomItem &&
                         <div className="menu__items-item">
-                            <a href="#">Custom</a>
+                            <button>Custom</button>
                         </div>
                     }
                 </div>
@@ -77,9 +77,9 @@ class Menu extends PureComponent {
             const price = sizeToPrice[size];
             return (
                 <div key={sizeIndex} className="menu__items-item__sizes-row">
-                    <a href="#" onClick={e => this._addItemToCart(e, item.name, price, size)}>
+                    <button onClick={e => this._addItemToCart(e, item.name, price, size)}>
                         {size}
-                    </a>
+                    </button>
                     <p>${price}</p>
                 </div>
             );
